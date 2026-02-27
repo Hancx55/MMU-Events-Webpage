@@ -1,85 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Current Events</title>
+        <script src="JavaScript.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Events this month:</h1>
-        
-        <div id = 'headings'>
-            <button id = "prev-month">Previous Month</button>
-            <h3>(month name)</h3>
-            <button id = "next-month">Next Month</button>
-
+        <div id="navbar"></div>
+        <h1 id="eventtitle">Events this month:</h1>
+        <div id="events">
+            <!--10 events per page-->
+            <!--javascript will be used to inject the event into each box-->
+            <div id="e1">event1</div>
+            <div id="e2">event2</div>
+            <div id="e3">event3</div>
+            <div id="e4">event4</div>
+            <div id="e5">event5</div>
+            <div id="e6">event6</div>
+            <div id="e7">event7</div>
+            <div id="e8">event8</div>
+            <div id="e9">event9</div>
+            <div id="e10">event10</div>
         </div>
-
-        <div id="days-columns">
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-            <div>Sun</div>
+        <div id = 'buttons'>
+            <button id = "prev-page">Previous Page</button>
+            <h3>pages (1 of 5)</h3>
+            <button id = "next-page">Next Page</button>
         </div>
-
-        <!--each row for day and week of the month-->
-        <div id="grid-cal"> <!--grid calendar - use grid to display in css-->
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-            <div class="day"></div>
-        </div>
+        <footer id="footer"></footer>
     </body>
 </html>

@@ -1,0 +1,115 @@
+/* general styles for all pages */
+html {
+    font-family: 'Arial', sans-serif;
+    background-color: #cec9c9;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* styles for navigation bar (all pages) */
+#navbar img {
+    max-height: 70px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #312f2f;
+    color: white;
+    border: solid 1px #312f2f;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    max-height: 200px;
+}
+
+#titles {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+    flex: 1;
+    justify-content: space-around;
+    margin: 0 20px;
+}
+
+#search {
+    display: flex;
+    gap: 10px;
+}
+
+#user-profile {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    border: solid 3px rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 20px 30px;
+    background-color: #080808;
+}
+
+nav a:hover {
+    background-color: #6b6868;
+}
+
+/* styles for footer (all pages) */
+
+#footer {
+    background-color: #312f2f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* event page styles */
+#eventtitle {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#events {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+#events div {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #00afff;
+}
+
+#events div:hover {
+    background-color: #0070a3;
+}
+
+#buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
