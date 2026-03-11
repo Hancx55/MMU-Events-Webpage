@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Current Events</title>
         <script src="JavaScript.js" defer></script>
+        <script src="\javascript\eventpagejs.js" defer></script>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -28,6 +29,17 @@
             <button id = "prev-page">Previous Page</button>
             <h3>pages (1 of 5)</h3>
             <button id = "next-page">Next Page</button>
+        </div>
+
+        <div id="event-details">
+            <div id="event-content">
+                <h2 id="event-name">Event Name</h2>
+                <p id="event-date">Event Date</p>
+                <p id="event-description">Event Description</p>
+                <button id="bookevent">Book Event</button>
+                <div id="bookingStatus"></div>
+                <button id="close-event">close</button>
+            </div>
         </div>
         <footer id="footer"></footer>
     </body>

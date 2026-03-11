@@ -113,3 +113,30 @@ nav a:hover {
     justify-content: center;
     margin: 20px 0;
 }
+
+/*pop up event*/
+#event-details {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+
+}
+
+#event-content {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#close-event-details {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
