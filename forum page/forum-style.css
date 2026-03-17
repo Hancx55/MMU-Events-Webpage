@@ -1,0 +1,155 @@
+/* --- Global Styles --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #cec9c9;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header & Navbar Fix --- */
+#navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #312f2f;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#titles img {
+    height: 60px; /* Fixed sizing to prevent the giant logo */
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    border: solid 2px #000;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #080808;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* --- Layout --- */
+.main-content {
+    flex: 1 0 auto;
+    padding: 20px;
+}
+
+.forum-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+#eventtitle {
+    font-size: 32px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* --- Forum Wrapper --- */
+.forum-wrapper {
+    flex: 2;
+    background-color: #e0e0e0;
+    padding: 25px;
+    border: 1px solid #312f2f;
+    border-radius: 8px;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box input, .input-box textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-post {
+    background-color: #080808;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* --- Tags & Sidebar --- */
+.tag-selector { margin-bottom: 10px; font-size: 14px; text-align: left;}
+
+.tag {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+.tag-general { background: #555; }
+.tag-booking { background: #00afff; }
+.tag-social { background: #28a745; }
+.tag-urgent { background: #dc3545; }
+
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-box {
+    background: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #312f2f;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.sidebar-box h4 { margin: 0 0 10px 0; color: #00afff; }
+
+/* --- Post Cards --- */
+#events { margin-top: 30px; }
+
+.post-card {
+    background: #00afff;
+    color: white;
+    padding: 15px;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.post-meta { font-size: 11px; color: #312f2f; display: block; margin-top: 10px; font-weight: bold; }
+
+/* --- Footer --- */
+#footer {
+    background-color: #312f2f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 13px;
+}

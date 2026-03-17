@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Forum | MMU Events</title>
+    <link rel="stylesheet" href="forum-style.css">
+    <script src="forum-logic.js" defer></script>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="titles">
+            <img src="images/mmu-logo.svg" alt="MMU Logo">
+        </div>
+        <nav>
+            <a href="index.html">HOME PAGE</a>
+            <a href="#">EVENTS</a>
+            <a href="#">MY PROFILE</a>
+        </nav>
+    </div>
+
+    <div id="eventtitle">STUDENT FORUM</div>
+
+    <div class="main-content">
+        <div class="forum-container">
+            
+            <div class="forum-wrapper">
+                <div class="input-box">
+                    <input type="text" id="topic" placeholder="Discussion Topic...">
+                </div>
+                
+                <div class="tag-selector">
+                    <label>Category:</label>
+                    <select id="postTag">
+                        <option value="General">General Chat</option>
+                        <option value="Booking">Booking Help</option>
+                        <option value="Social">Social/Society</option>
+                        <option value="Urgent">Urgent Info</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <textarea id="details" placeholder="Write your message here..."></textarea>
+                </div>
+                <button type="button" class="btn-post" id="postBtn">Post to Forum</button>
+
+                <div id="events">
+                    <div class="post-card">
+                        <span class="tag tag-general">General</span>
+                        <h3>Welcome to the Student Forum</h3>
+                        <p>Discuss booking issues, society meetups, and general campus life here.</p>
+                        <span class="post-meta">Posted by: System_Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="sidebar-box">
+                    <h4>Upcoming Events</h4>
+                    <ul>
+                        <li>March 20: Careers Fair</li>
+                        <li>March 22: SU Movie Night</li>
+                        <li>April 01: Spring Ball</li>
+                    </ul>
+                </div>
+                <div class="sidebar-box">
+                    <h4>Forum Rules</h4>
+                    <p>1. Be respectful</p>
+                    <p>2. No spamming</p>
+                    <p>3. Keep it student-focused</p>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>MMU Events © 2026</p>
+        <div id="address">
+            <p>Manchester Metropolitan University, Ormond Building</p>
+            <p>Manchester, M15 6BX, United Kingdom</p>
+            <p>+44 (0)161 247 2000</p>
+        </div>
+    </div>
+
+</body>
+</html>
