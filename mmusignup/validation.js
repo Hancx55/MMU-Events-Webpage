@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             password_input?.parentElement?.classList.add("incorrect")
         }
 
-        return
+        return errors
     }
 
     function getSignupFormErrors(firstname, email, password, repeatPassword) {
