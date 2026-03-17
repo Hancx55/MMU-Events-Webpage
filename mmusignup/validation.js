@@ -9,19 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!form) return
 
     form.addEventListener("submit", (e) => {
-        const errors = getSignupFormErrors(
-            firstname_input?.value,
-            email_input?.value,
-            password_input?.value,
-            repeat_password_input?.value
-        )
+        let errors = []
 
-        if(firstname_input){
-            errors = getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_password_input.value)   
-
-        }
-        else{
-            errors = getLoginFormErrors(email_input.value, password_input.value)
+        if (firstname_input) {
+            errors = getSignupFormErrors(
+                firstname_input.value,
+                email_input.value,
+                password_input.value,
+                repeat_password_input.value
+            )
+        } else {
         }
 
         if (errors.length > 0) {
