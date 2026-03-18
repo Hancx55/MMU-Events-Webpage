@@ -11,40 +11,6 @@ body {
     flex-direction: column;
 }
 
-/* --- Header & Navbar Fix --- */
-#navbar {
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-    background-color: #312f2f;
-    justify-content: space-between;
-    height: 100px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#titles img {
-    height: 60px; /* Fixed sizing to prevent the giant logo */
-    width: auto;
-    filter: brightness(0) invert(1);
-}
-
-nav {
-    display: flex;
-    gap: 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    border: solid 2px #000;
-    border-radius: 5px;
-    padding: 10px 15px;
-    background-color: #080808;
-    font-weight: bold;
-    font-size: 13px;
-}
-
 /* --- Layout --- */
 .main-content {
     flex: 1 0 auto;

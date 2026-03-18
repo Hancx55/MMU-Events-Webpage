@@ -1,3 +1,23 @@
+//inserts nav bar to all pages
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("/components/navigation.html")
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("navbar").innerHTML = html;
+    });
+});
+//inserts footer to all pages
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("/components/footer.html")
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("footer").innerHTML = html;
+    });
+});
+
+//render on load
+document.addEventListener("DOMContentLoaded", render);
+
 //example events to input for now
 const modal = document.getElementById("event-details");
 const eventTitle = document.getElementById("event-name");
@@ -15,6 +35,7 @@ const events = Array.from({ length:32 }, (_, i) => ({
     shortdesc: 'short desc goes here',
     description: 'full desc goes here',
     datetime: "2026-05-05 10:47",
+    image: `images/event${(i % 5) + 1}.jpg`,
     attendees: []
 }))
 
@@ -80,3 +101,4 @@ bookBtn.onclick = () => {
 closeBtn.onclick = () => {
     modal.style.display = "none";
 };
+

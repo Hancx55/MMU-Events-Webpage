@@ -17,10 +17,6 @@ nav {
     gap: 20px;
 }
 
-a {
-    color: white;
-}
-
 #navbar {
     display: flex;
     align-items: center;
@@ -83,4 +79,65 @@ nav a:hover {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+
+/* event page styles */
+#eventtitle {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#events {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+#events div {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #00afff;
+}
+
+#events div:hover {
+    background-color: #0070a3;
+}
+
+#buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/*pop up event*/
+#event-details {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+
+}
+
+#event-content {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#close-event-details {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 24px;
 }
