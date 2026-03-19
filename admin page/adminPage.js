@@ -1,33 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const eventForm = document.getElementById("eventCreationForm");
+    const form = document.getElementById("eventCreationForm");
+    const adminList = document.getElementById("adminEventList");
 
-    if (eventForm) {
-        eventForm.onsubmit = function(e) {
-            e.preventDefault();
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-            // Create event object
-            const newEvent = {
-                id: Date.now(), // Unique ID
-                name: document.getElementById("eventName").value,
-                location: document.getElementById("location").value,
-                datetime: document.getElementById("timeDate").value.replace('T', ' '),
-                shortdesc: document.getElementById("shortDesc").value,
-                description: document.getElementById("fullDesc").value,
-                image: "images/event1.jpg", // Default placeholder
-                attendees: []
-            };
-
-            // Get existing events from localStorage or empty array
-            const storedEvents = JSON.parse(localStorage.getItem("customEvents")) || [];
-            
-            // Add new event to the list
-            storedEvents.push(newEvent);
-            
-            // Save back to localStorage
-            localStorage.setItem("customEvents", JSON.stringify(storedEvents));
-
-            alert(`Event "${newEvent.name}" has been published!`);
-            eventForm.reset();
+        // 1. Capture Data
+        const newEvent = {
+            id: Date.now(), // Unique ID
+            name: document.getElementById("eventName").value,
+            location: document.getElementById("location").value,
+            datetime: document.getElementById("timeDate").value,
+            shortdesc: document.getElementById("shortDescription").value,
+            description: document.getElementById("fullDescription").value,
+            image: "images/event1.jpg" // Placeholder
         };
-    }
+
+        // 2. Save to LocalStorage for EventPage.html to see
+        let storedEvents = JSON.parse(localStorage.getItem("customEvents")) || [];
+        storedEvents.push(newEvent);
+        localStorage.setItem("customEvents", JSON.stringify(storedEvents));
+
+        // 3. Update Admin Sidebar View
+        if (adminList.innerHTML.includes("No events posted")) adminList.innerHTML = "";
+        
+        const eventEntry = document.createElement("div");
+        eventEntry.innerHTML = `
+            <strong>${newEvent.name}</strong><br>
+            <small>${newEvent.datetime}</small>
+        `;
+        adminList.prepend(eventEntry);
+
+        // 4. Reset and Alert
+        alert("Event successfully posted to the public Events page!");
+        form.reset();
+    });
 });

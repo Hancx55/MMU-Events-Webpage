@@ -7,45 +7,56 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="adminPage.css">
     <script src="JavaScript.js" defer></script>
-    <script src="admin-logic.js" defer></script>
+    <script src="adminPage.js" defer></script>
 </head>
 <body>
     <div id="navbar"></div>
 
     <div class="dashboard-container">
         <aside class="sidebar">
-            <div class="admin-view-module">
-                <h3>Navigation</h3>
-                <button type="button" class="nav-btn" onclick="location.href='homepage.html'">Home</button>
-                <button type="button" class="nav-btn" onclick="location.href='forum page/forum.html'">Forum</button>
-                <hr>
-                <p style="font-size: 0.8em; margin-top: 10px;">Logged in as: <strong>Admin_User</strong></p>
-            </div>
+            <section class="admin-view-module">
+                <h3 class="sidebar-title">Posted Events</h3>
+                <p class="sidebar-subtitle">Current session uploads:</p>
+                <div id="adminEventList">
+                    <p style="font-size: 12px; color: #888;">No events posted yet.</p>
+                </div>
+            </section>
         </aside>
 
         <main class="main-content">
             <h1 class="form-title">Create New Event</h1>
+            
             <form id="eventCreationForm">
                 <div class="form-group">
                     <label for="eventName">Event Name:</label>
-                    <input type="text" id="eventName" class="form-control" required>
+                    <input type="text" id="eventName" class="form-control" required placeholder="e.g. Careers Fair">
                 </div>
+
                 <div class="form-group">
                     <label for="location">Location:</label>
-                    <input type="text" id="location" class="form-control" required>
+                    <input type="text" id="location" class="form-control" required placeholder="e.g. Business School">
                 </div>
+
                 <div class="form-group">
-                    <label for="timeDate">Time & Date:</label>
+                    <label for="timeDate">Date & Time:</label>
                     <input type="datetime-local" id="timeDate" class="form-control" required>
                 </div>
+
                 <div class="form-group">
-                    <label for="description">Short Description:</label>
-                    <input type="text" id="shortDesc" class="form-control" placeholder="Brief summary for list view" required>
+                    <label for="availableSpots">Spots:</label>
+                    <input type="number" id="availableSpots" class="form-control" min="1" required>
                 </div>
+
                 <div class="form-group">
-                    <label for="fullDesc">Full Description:</label>
-                    <textarea id="fullDesc" class="form-control" required></textarea>
+                    <label for="shortDescription">Short Summary:</label>
+                    <input type="text" id="shortDescription" class="form-control" required placeholder="Brief catchphrase for the list view">
                 </div>
+
+                <div class="form-group align-top">
+                    <label for="fullDescription">Full Details:</label>
+                    <textarea id="fullDescription" class="form-control" required placeholder="Detailed information for the popup..."></textarea>
+                </div>
+
                 <button type="submit" class="btn-submit">Post Event to Site</button>
             </form>
         </main>
