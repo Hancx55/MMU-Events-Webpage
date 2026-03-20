@@ -29,15 +29,8 @@ const closeBtn = document.getElementById("close-event");
 
 let selectedEvent = null;
 
-const events = Array.from({ length:32 }, (_, i) => ({
-    id: i+1,
-    name: `Event ${i+1}`,
-    shortdesc: 'short desc goes here',
-    description: 'full desc goes here',
-    datetime: "2026-05-05 10:47",
-    image: `images/event${(i % 5) + 1}.jpg`,
-    attendees: []
-}))
+// Load events from localStorage, or use empty array if none
+const events = JSON.parse(localStorage.getItem("customEvents")) || [];
 
 //switch content between pages
 let current=1;
